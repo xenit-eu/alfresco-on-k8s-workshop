@@ -4,10 +4,11 @@ alfresco:
       enabled: false
   ingress:
     host: mydomain.xenit.eu
-    protocol: http
+    protocol: https
     kubernetes.io/ingress.class: {}
     ingressAnnotations:
-      nginx.ingress.kubernetes.io/ssl-redirect: "false"
+      kubernetes.io/ingress.class: "nginx"
+      cert-manager.io/cluster-issuer: "letsencrypt-production"
   imageCredentials:
     private:
       username: hello
@@ -36,3 +37,5 @@ alfresco:
     enabled: false
   digitalWorkspace:
     enabled: false
+letsencrypt:
+  email: test@test.eu
