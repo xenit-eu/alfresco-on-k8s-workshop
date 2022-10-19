@@ -1,0 +1,40 @@
+alfresco:
+  general:
+    networkPolicies:
+      enabled: false
+  ingress:
+    host: test
+    protocol: http
+    kubernetes.io/ingress.class: {}
+  imageCredentials:
+    private:
+      username: hello
+      password: world
+    alfresco:
+      username: hello
+      password: world
+  acs:
+    resources:
+      requests:
+        memory: "1Gi"
+        cpu: "0"
+    envFrom:
+      - configMapRef:
+          name: acs-configmap
+    
+  mq:
+    resources:
+      requests:
+        memory: "1Gi"
+        cpu: "0"
+  postgresql:
+    resources:
+      requests:
+        memory: "1Gi"
+        cpu: "0"
+  solr:
+    enabled: false
+  transformServices:
+    enabled: false
+  digitalWorkspace:
+    enabled: false
