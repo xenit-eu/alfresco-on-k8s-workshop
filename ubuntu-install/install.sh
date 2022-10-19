@@ -42,4 +42,3 @@ curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
 
 # install k9s
 curl -sS https://webi.sh/k9s | sh
-source ~/.config/envman/PATH.env
