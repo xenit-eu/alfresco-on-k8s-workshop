@@ -3,9 +3,11 @@ alfresco:
     networkPolicies:
       enabled: false
   ingress:
-    host: test
+    host: mydomain.xenit.eu
     protocol: http
     kubernetes.io/ingress.class: {}
+    ingressAnnotations:
+      nginx.ingress.kubernetes.io/ssl-redirect: "false"
   imageCredentials:
     private:
       username: hello
@@ -17,11 +19,7 @@ alfresco:
     resources:
       requests:
         memory: "1Gi"
-        cpu: "0"
-    envFrom:
-      - configMapRef:
-          name: acs-configmap
-    
+        cpu: "0"    
   mq:
     resources:
       requests:

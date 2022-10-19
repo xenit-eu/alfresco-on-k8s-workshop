@@ -25,4 +25,4 @@ appVersion: "0.1.0"
 dependencies:
   - name: alfresco
     repository: "https://repo.xenit.eu/public/open-source/helm/charts/"
-    version: 0.1.4
+    version: 0.1.5
