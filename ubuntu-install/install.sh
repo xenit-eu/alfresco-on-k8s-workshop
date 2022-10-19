@@ -31,7 +31,7 @@ mv ./kind /usr/local/bin/kind
 snap install kubectl --classic
 
 # setup cluster
-kind create cluster --config --config=kind/config.yaml
+kind create cluster --config=kindconfig/config.yaml
 kubectl config use-context kind-kind
 
 # install ingress controller
